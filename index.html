@@ -1,0 +1,1151 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let menu1Open = false;
+    var menu1Items = {
+      items: [
+        {
+          name: "About",
+          submenu: [
+            {
+              name: "Library Information",
+              submenu: [
+                {
+                  name: "Location & Hours",
+                  link: "https://www.acpl.lib.in.us/locations-hours",
+                },
+                {
+                  name: "Location & Hours 2",
+                  link: "https://www.acpl.lib.in.us/locations-hours",
+                },
+                { name: "Careers", link: "https://www.acpl.lib.in.us/careers" },
+                {
+                  name: "Volunteer",
+                  link: "https://www.acpl.lib.in.us/volunteering",
+                },
+                {
+                  name: "The ACPL Story",
+                  link: "https://www.acpl.lib.in.us/acpl-history",
+                },
+                {
+                  name: "ACPL News",
+                  link: "https://www.acpl.lib.in.us/media-archive",
+                },
+                //  Uncomment when switched to new wix site
+                // { name: "Your ACPL",
+                //     link: 'https://www.acpl.lib.in.us/your-acpl'
+                //  },
+              ],
+            },
+            {
+              name: "Governance",
+              submenu: [
+                {
+                  name: "Board of Trustees",
+                  link: "https://www.acpl.lib.in.us/board",
+                },
+                {
+                  name: "Library Leadership",
+                  link: "https://www.acpl.lib.in.us/senior-leadership",
+                },
+                {
+                  name: "ACPL Foundation & Friends of the ACPL",
+                  link: "https://supportacpl.org/",
+                },
+                {
+                  name: "Policies & Procedures",
+                  link: "https://www.acpl.lib.in.us/policies-procedures",
+                },
+                {
+                  name: "Mission, Vision, & Values",
+                  link: "https://www.acpl.lib.in.us/mission-vision-core",
+                },
+              ],
+            },
+            {
+              name: "Connect With Us",
+              submenu: [
+                {
+                  name: "Ask a Librarian",
+                  link: "https://www.acpl.lib.in.us/ask-librarian",
+                },
+                {
+                  name: "Share your story",
+                  link: "https://www.acpl.lib.in.us/share-your-story",
+                },
+                {
+                  name: "Donate to the library",
+                  link: "https://interland3.donorperfect.net/weblink/weblink.aspx?name=aclp_lib&id=3",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Books, Movies, & More",
+          submenu: [
+            {
+              name: "Digital Collections",
+              submenu: [
+                {
+                  name: "Digital Resources",
+                  link: "https://www.acpl.lib.in.us/digital-resources",
+                },
+                {
+                  name: "Download eBooks & Magazines",
+                  link: "https://www.acpl.lib.in.us/digital-library",
+                },
+                {
+                  name: "Ecourses learning",
+                  link: "https://www.acpl.lib.in.us/ecourses-learning",
+                },
+                {
+                  name: "Stream Movies",
+                  link: "https://www.acpl.lib.in.us/digital-library",
+                },
+                {
+                  name: "Stream Music",
+                  link: "https://www.acpl.lib.in.us/digital-library",
+                },
+              ],
+            },
+            {
+              name: "Special Collections",
+              submenu: [
+                {
+                  name: "Community Album",
+                  link: "http://contentdm.acpl.lib.in.us/digital/",
+                },
+                {
+                  name: "Genealogy",
+                  link: "https://www.genealogy.acpl.lib.in.us/",
+                },
+                {
+                  name: "Government Documents",
+                  link: "https://www.acpl.lib.in.us/government-documents",
+                },
+                {
+                  name: "Library of Things",
+                  link: "https://www.acpl.lib.in.us/library-of-things",
+                },
+                {
+                  name: "Lincoln Collection",
+                  link: "https://www.acpl.lib.in.us/lincoln-collection",
+                },
+                {
+                  name: "Mobile Hotspot",
+                  link: "https://www.acpl.lib.in.us/mobile-internet-hotspots",
+                },
+                {
+                  name: "Seed Library",
+                  link: "https://www.acpl.lib.in.us/seed-library",
+                },
+              ],
+            },
+            {
+              name: "Beyond Our Collection",
+              submenu: [
+                {
+                  name: "Borrow from another Library",
+                  link: "https://www.acpl.lib.in.us/purchase-suggestions",
+                },
+                {
+                  name: "Request and Item",
+                  link: "https://www.acpl.lib.in.us/purchase-suggestions",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Services",
+          submenu: [
+            {
+              name: "My Account",
+              submenu: [
+                {
+                  name: "Login to your Library Account",
+                  link: "https://acpl.na4.iiivega.com/",
+                },
+                {
+                  name: "Navigating My Account",
+                  link: "https://documentation.iii.com/vega/patron/Landing_Pages/Home-Patron.htm",
+                },
+                {
+                  name: "Get a Library Card",
+                  link: "https://www.acpl.lib.in.us/library-card",
+                },
+              ],
+            },
+            {
+              name: "Meeting & Study Rooms",
+              submenu: [
+                {
+                  name: "Reserve a Room",
+                  link: "https://www.acpl.lib.in.us/reserve-room",
+                },
+              ],
+            },
+            {
+              name: "Specialized Services",
+              submenu: [
+                {
+                  name: "Access Fort Wayne",
+                  link: "https://www.acpl.lib.in.us/access-fort-wayne-tv",
+                },
+                {
+                  name: "Audio Reading Service",
+                  link: "https://www.acpl.lib.in.us/audio-reading-service",
+                },
+                {
+                  name: "Curbside Delivery",
+                  link: "https://www.acpl.lib.in.us/curbside-delivery",
+                },
+                {
+                  name: "Educational Support",
+                  link: "https://www.acpl.lib.in.us/educational-support",
+                },
+                {
+                  name: "Library at Home",
+                  link: "https://www.acpl.lib.in.us/library-at-home",
+                },
+                {
+                  name: "Local Authors",
+                  link: "https://www.acpl.lib.in.us/local-authors",
+                },
+                {
+                  name: "The Maker Lab",
+                  link: "https://www.acpl.lib.in.us/maker-labs",
+                },
+                {
+                  name: "Rolland Center",
+                  link: "https://www.acpl.lib.in.us/rolland-center",
+                },
+                {
+                  name: "WELT Radio Station",
+                  link: "https://www.acpl.lib.in.us/welt-radio-station",
+                },
+                {
+                  name: "Wi-fi, Copying, Faxing & More",
+                  link: "https://www.acpl.lib.in.us/wifi-copying-faxing",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Programs and Events",
+          submenu: [
+            {
+              name: "Library Programs & Events",
+              submenu: [
+                {
+                  name: "ACPL Program Calendar",
+                  link: "https://acpl.libnet.info/events?r=thismonth",
+                },
+                {
+                  name: "Adult Programs",
+                  link: "https://www.acpl.lib.in.us/adult-programs",
+                },
+                {
+                  name: "Book Clubs",
+                  link: "https://www.acpl.lib.in.us/book-clubs",
+                },
+                {
+                  name: "Children’s Programs",
+                  link: "https://www.acpl.lib.in.us/children-programs",
+                },
+                {
+                  name: "Krull Gallery",
+                  link: "https://www.acpl.lib.in.us/krull-gallery",
+                },
+                {
+                  name: "Teen Programs",
+                  link: "https://www.acpl.lib.in.us/teen-programs",
+                },
+              ],
+            },
+            {
+              name: "Promotions & Initiatives",
+              submenu: [
+                {
+                  name: "Tax Assistance",
+                  link: "https://www.acpl.lib.in.us/tax-assistance",
+                },
+                {
+                  name: "Summer Learning Program",
+                  link: "https://www.acpl.lib.in.us/readingprograms",
+                },
+                {
+                  name: "Rock the Plaza",
+                  link: "https://www.acpl.lib.in.us/music",
+                },
+                {
+                  name: "Music on the Plaza",
+                  link: "https://www.acpl.lib.in.us/music",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Genealogy",
+          link: "https://www.genealogy.acpl.lib.in.us/",
+        },
+      ],
+    };
+
+    var socialLinks = [
+      {
+        href: "https://www.facebook.com/AllenCountyLibrary",
+        imgSrc:
+          "https://static.wixstatic.com/media/11062b_ef6a6ac194704911951645990055c2ce~mv2.png",
+        alt: "ACPL Facebook",
+      },
+      {
+        href: "https://www.instagram.com/acpl_insta/",
+        imgSrc:
+          "https://static.wixstatic.com/media/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png",
+        alt: "ACPL Instagram",
+      },
+      {
+        href: "https://www.youtube.com/user/askacpl",
+        imgSrc:
+          "https://static.wixstatic.com/media/11062b_fe985b889c144b348eefc7bbc67018b4~mv2.png",
+        alt: "Ask ACPL Youtube",
+      },
+    ];
+
+    function toggleMenu1() {
+      $("#search").hide(100);
+      $("#menu").toggle();
+      if ($("#menu").is(":visible")) {
+        $("#overlay").fadeIn(300);
+      } else {
+        $("#overlay").hide(100);
+      }
+    }
+
+    function isHovered(selector) {
+      return $(selector + ":hover").length > 0;
+    }
+
+    function openMegaMenu(menuTitle) {
+      if (menuTitle == "Genealogy") {
+        hideAllMegas();
+        return;
+      }
+      const menus = ["About", "Books", "Services", "Programs"];
+
+      menus.map((menu) => {
+        if (menuTitle != menu) {
+          if ($(`#${menu}`).is(":visible")) {
+            hideAllMegas();
+          }
+        }
+      });
+      $(`#${menuTitle}`).fadeIn(300);
+    }
+
+    function closeMegaMenu(menuTitle) {
+      setTimeout(function () {
+        if (!isHovered(`#${menuTitle}`)) {
+          $(`#${menuTitle}`).fadeOut(100);
+        }
+      }, 100);
+    }
+
+    function hideAllMegas() {
+      $("#About").fadeOut(100);
+      $("#Books").fadeOut(100);
+      $("#Services").fadeOut(100);
+      $("#Programs").fadeOut(100);
+    }
+
+    function openSearch() {
+      hideAllMegas();
+      $("#search").toggle();
+    }
+
+    function search(e) {
+      e.preventDefault();
+      const query = $("#searchInput").val();
+      if (query) {
+        window.location.href = `https://acpl.na4.iiivega.com/search?query=${query}&searchType=everything&pageSize=10`;
+      }
+    }
+
+    function openMenu2() {
+      $("#search").fadeOut(100);
+      $("#menu2").toggle();
+      if ($("#menu2").is(":visible")) {
+        $("#overlay").fadeIn(300);
+      } else {
+        $("#overlay").fadeOut(100);
+      }
+    }
+
+    function overlayClicked() {
+      $("#overlay").fadeOut(100);
+      $("#menu").fadeOut(100);
+      $("#menu2").fadeOut(100);
+    }
+
+    function generateMenu(data, parent, level = 0) {
+      var ul = $("<ul>");
+      $.each(data, function (index, item) {
+        var li = $(`<li id='li-${level}''>`).appendTo(ul);
+        var a = $(`<a id="a-${level}" '>`)
+          .text(item.name)
+          .attr("href", item.link)
+          .appendTo(li);
+        if (item.submenu) {
+          generateMenu(item.submenu, li, level + 1);
+        }
+      });
+      ul.appendTo(parent);
+    }
+
+    $(document).ready(function () {
+      // Hide all of the menus when the page loads
+      $("#menu").hide();
+      $("#menu2").hide();
+      $("#search").hide();
+      $("#overlay").hide();
+
+      // Dynamically create the Mega Menus
+      $.each(menu1Items.items, function (index, item) {
+        // Check if the item has submenu
+        if (item.submenu) {
+          // Create mega-menu container
+          var shortName = item.name.split(/[\s,]+/)[0];
+          var $megaMenu = $(
+            `<div 
+            class="mega-menu" id="${shortName}"
+            ></div>`
+          );
+          $megaMenu.mouseleave(() => {
+            closeMegaMenu(shortName);
+          });
+          $megaMenu.hide();
+          // Loop through submenu items
+          let $stackedMenu = $("<div class='column'> </div>");
+          $.each(item.submenu, function (subIndex, subItem) {
+
+        // SPECIAL COLUMNS
+
+            if (
+              item.name == "Services" &&
+              (subItem.name == "My Account" ||
+                subItem.name == "Meeting & Study Rooms")
+            ) {
+                if(subItem.name == "Meeting & Study Rooms"){
+              var $header = $(
+                '<div class="header" style="margin-top: 24px">' + subItem.name.toUpperCase() + "</div>"
+              );
+
+              } else {
+                var $header = $(
+                '<div class="header">' + subItem.name.toUpperCase() + "</div>"
+              );
+              }
+           
+              $stackedMenu.append($header);
+              $megaMenu.append($stackedMenu);
+              var $ul = $("<ul></ul>");
+
+              // Loop through submenu of submenu
+              $.each(subItem.submenu, function (subSubIndex, subSubItem) {
+                // Create li element
+                var $li = $("<li></li>");
+
+                // Create anchor element
+                var $a = $(
+                  `<a href="${subSubItem.link}">` + subSubItem.name + "</a>"
+                );
+
+                // Append anchor to li
+                $li.append($a);
+
+                // Append li to ul
+                $ul.append($li);
+              });
+
+              $stackedMenu.append($ul);
+              return;
+            }
+
+            if (
+              item.name == "Services" &&
+              subItem.name == "Specialized Services"
+            ) {
+              console.log(subItem);
+              var $column1 = $('<div class="column"></div>');
+              var $column2 = $('<div class="column"></div>');
+              var $innercolumnGroup = $('<div class="col-group"> </div>');
+              var $columnGroup = $('<div class="double-col"></div>')
+              var $ul1 = $("<ul></ul>");
+              var $ul2 = $("<ul></ul>");
+              $.each(subItem.submenu, function (subSubIndex, subSubItem) {
+                var $li = $("<li></li>");
+
+                // Create anchor element
+                var $a = $(
+                  `<a href="${subSubItem.link}">` + subSubItem.name + "</a>"
+                );
+
+                // Append anchor to li
+                $li.append($a);
+
+                // Append li to ul
+                if(subSubIndex <= 4){
+                    $ul1.append($li);
+                } else {
+                    $ul2.append($li);
+                }
+              });
+              var $header = $(
+                '<div class="header">' + subItem.name.toUpperCase() + "</div>"
+              );
+              $column1.append($ul1);
+              $column2.append($ul2);
+              $columnGroup.append($header);
+              $innercolumnGroup.append($column1);
+              $innercolumnGroup.append($column2);
+              $columnGroup.append($innercolumnGroup);
+
+              $megaMenu.append($columnGroup);
+              return;
+            }
+
+            if (
+              item.name == "Programs and Events" &&
+              subItem.name == "Library Programs & Events"
+            ) {
+              console.log(subItem);
+              var $column1 = $('<div class="column"></div>');
+              var $column2 = $('<div class="column"></div>');
+              var $innercolumnGroup = $('<div class="col-group"> </div>');
+              var $columnGroup = $('<div class="double-col"></div>')
+              var $ul1 = $("<ul></ul>");
+              var $ul2 = $("<ul></ul>");
+              $.each(subItem.submenu, function (subSubIndex, subSubItem) {
+                var $li = $("<li></li>");
+
+                // Create anchor element
+                var $a = $(
+                  `<a href="${subSubItem.link}">` + subSubItem.name + "</a>"
+                );
+
+                // Append anchor to li
+                $li.append($a);
+
+                // Append li to ul
+                if(subSubIndex <= 2){
+                    $ul1.append($li);
+                } else {
+                    $ul2.append($li);
+                }
+              });
+              var $header = $(
+                '<div class="header">' + subItem.name.toUpperCase() + "</div>"
+              );
+              $column1.append($ul1);
+              $column2.append($ul2);
+              $columnGroup.append($header);
+              $innercolumnGroup.append($column1);
+              $innercolumnGroup.append($column2);
+              $columnGroup.append($innercolumnGroup);
+
+              $megaMenu.append($columnGroup);
+              return;
+            }
+
+
+
+            // NOT A SPECIAL COLUMN
+            // Create column container
+            var $column = $('<div class="column"></div>');
+
+            // Check if submenu item has submenu
+            if (subItem.submenu) {
+              // Create header for submenu
+              var $header = $(
+                '<div class="header">' + subItem.name.toUpperCase() + "</div>"
+              );
+
+              // Append header to column
+              $column.append($header);
+
+              // Create ul element
+              var $ul = $("<ul></ul>");
+
+              // Loop through submenu of submenu
+              $.each(subItem.submenu, function (subSubIndex, subSubItem) {
+                // Create li element
+                var $li = $("<li></li>");
+
+                // Create anchor element
+                var $a = $(
+                  `<a href="${subSubItem.link}">` + subSubItem.name + "</a>"
+                );
+
+                // Append anchor to li
+                $li.append($a);
+
+                // Append li to ul
+                $ul.append($li);
+              });
+
+              // Append ul to column
+              $column.append($ul);
+            } else {
+              // If no submenu, create li directly
+              var $li = $("<li></li>");
+              var $a = $(`<a href="${item.link}">` + subItem.name + "</a>");
+              $li.append($a);
+              $column.append($li);
+            }
+
+            // Append column to mega-menu
+            $megaMenu.append($column);
+          });
+
+          // Append mega-menu to body
+          $("body").append($megaMenu);
+        }
+      });
+
+      // Social links in top light blue section
+      $.each(socialLinks, function (index, item) {
+        var $anchor = $("<a>").attr("href", item.href);
+        var $img = $("<img>").attr({
+          src: item.imgSrc,
+          alt: item.alt,
+          style: "width: 22px; height: 22px",
+        });
+        $anchor.append($img);
+
+        // Append the anchor to the section with id "socials"
+        $("#socials").append($anchor);
+      });
+      // Dynamically Create the ACPL Mobile Menu from menu1Data
+      // And then start them as hidden, add event listener for when the link is clicked
+      // to open the submenu.
+      generateMenu(menu1Items.items, $("#nav"));
+      $("#nav li:has(ul)").children("ul").hide();
+
+      $("#nav li:has(ul)")
+        .find("a")
+        .click(function () {
+          $(this).parent().find("ul:first").toggleClass("fadeIn-300subnav");
+        });
+    });
+  </script>
+  <style>
+    /* Font Imports */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+    /* Resetting CSS */
+    /* commented out because it might cause an issue with the iiivega site */
+    /*@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");*/
+    .header-bottom {
+		overflow: hidden !important;
+	}
+    button, input, optgroup, select, textarea {
+        font-family: "Roboto", sans-serif;
+    }
+    button {
+      background-color: none;
+      border: none;
+      cursor: pointer;
+    }
+    ul,
+    a {
+      list-style-type: none;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    .fadeIn-300subnav {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Nav 1 (ACPL NAV) */
+    #nav .fadeIn-300subnav {
+      display: block !important;
+      width: 300px;
+    }
+
+    /* ACPL Mobile Menu */
+    #hamburger-button {
+      display: none; /* Hide on larger displays*/
+    }
+    #horizontal-menu {
+      display: flex;
+      font-weight: 600;
+    }
+    #menu {
+      position: absolute;
+      top: 0px;
+      right: 0;
+      bottom: 0;
+      min-height: 100vh;
+      height: fit-content;
+      background-color: #0d4e98;
+      padding: 16px;
+      z-index: 1040;
+      width: 33%;
+    }
+    #menu button {
+      background-color: #0d4e98;
+      width: 50px;
+      margin: 24px 0;
+      color: white;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+    }
+    .margin-top-24 {
+        margin-top: 24px;
+    }
+    .fadeIn-300subnav {
+      max-width: 29vw !important;
+      margin: 16px 2px;
+      padding: 0;
+    }
+    .fadeIn-300subnav li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* MEGA MENUS */
+    .mega-menu {
+      display: flex;
+      position: absolute;
+      top: 96px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: min-content;
+      background-image: linear-gradient(180deg, white, white, #cfe1ff);
+      justify-content: center;
+      gap: 24px;
+      padding: 24px 0;
+      z-index: 1040;
+    }
+    .mega-menu li{
+        text-align: center;
+        height: 28px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mega-menu a {
+      color: #006eb0;
+      font-size: 16px;
+      font-family: "Nunito", sans-serif;
+      font-weight: 600;
+    }
+    .mega-menu .header {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      border-bottom: 2px solid #006eb0;
+      padding: 0 6px 6px 6px;
+      margin-bottom: 12px;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .mega-menu ul {
+      display: flex;
+      flex-direction: column;
+    }
+    .column {
+      min-width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+    .col-group .column {
+        min-width: 250px;
+    }
+    .col-group li, .col-group a {
+        padding: auto 0;
+    }
+    .double-col {
+        max-width: 600px;
+        min-width: fit-content;
+    }
+    .double-col li, .double-col a {
+        padding: inherit 0;
+    }
+    .col-group{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        max-width: 500px;
+    }
+
+    /* Horizontal Menu 1 (ACPL) */
+    #horizontal-menu li:hover {
+      background-color: white;
+      color: #006eb0;
+    }
+    #horizontal-menu li {
+      padding: 6px 8px;
+    }
+    .icon-user:before{
+        color: white !important;
+    }
+    .fa-bookmark:before {
+        color: white !important;
+    }
+    
+
+    #horizontal-menu li:hover a {
+      color: #0d4e98;
+    }
+
+    /* Overlay for when a menu is open used for both ACPL and IIIVega */
+    #overlay {
+      position: absolute;
+      z-index: 1032;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      min-height: 170vh;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+    @media screen and (max-width: 575.98px) {
+        .header-bottom {
+		overflow: inherit !important;
+        height: 100px !important;
+
+	}
+    .mobile-hide {
+        display: none !important;
+    }
+    .mobile-btn {
+        text-decoration: none; color: white; background-color: #2C4362; padding: 12px 6px; border-radius: 24px;
+        min-width: 6rem;
+        text-align: center;
+    }
+    .mobile-btn:hover {
+        background-color: #17202b;
+    }
+    }
+
+    /* Smaller Devices */
+    @media screen and (max-width:750px) {
+        #menu {
+            width: 100vw !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #nav {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        #nav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    @media screen and (min-width: 1150px) {
+        #menu {
+            display: none
+        }
+    }
+    @media screen and (max-width: 1150px) {
+      /* CSS RESET */
+      section {
+        display: block !important;
+      }
+      /* Mobile Menu ACPL */
+      #hamburger-button {
+        display: flex;
+      }
+      #horizontal-menu {
+        display: none;
+      }
+    #a-0{
+        padding-left: 6px;
+    }
+    #a-0, #a-1, #a-2 {
+      width: 90%;
+      height: 47px;
+      display: flex;
+      align-items: center;
+    }
+      #li-0 {
+        background-color: #2C4362;
+        width: 279px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #li-1 {
+        background-color: #3e536f;
+        width: 279px;
+      }
+
+      #a-1{
+        padding-left: 12px;
+      }
+      #li-2 {
+        background-color: #4F637C;
+        width: 279px;
+      }
+      #a-2{
+        padding-left: 24px;
+      }
+
+      /* Mega Menu */
+      .mega-menu {
+        display: none !important;
+      }
+
+      /* Nav 2 */
+      #nav2 a {
+        display: none;
+      }
+
+      /* iiivega Buttons */
+    }
+    #user-login-button {
+      background-color: #3d9be9 !important;
+      color: white !important;
+    }
+
+    app-onetrust-footer-button {
+      color: white !important;
+      background-color: #3d9be9 !important;
+    }
+
+    app-toggle-bookmarks-button {
+      color: white !important;
+      background-color: #3d9be9 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ACPL SECTION -->
+  <section style="height: 93px">
+    <!-- Light Blue Top section -->
+    <div
+      class="top"
+      style="
+        height: 34px;
+        background-color: #3d9be9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div
+        class="left"
+        id="socials"
+        style="display: flex; padding-left: 25px"
+      ></div>
+      <div class="right" style="padding-right: 25px; display: flex; gap: 12px">
+        <a
+          class="mobile-hide"
+          style="text-decoration: none; color: white"
+          href="https://acpl.polarislibrary.com/polaris/patronaccount/selfregister.aspx?ctx=1.1033.0.0.5"
+          >Get a Card</a
+        >
+        <div class="mobile-hide" style="border-left: 1px solid white"></div>
+        <a
+          class="mobile-hide"
+          style="text-decoration: none; color: white"
+          href="  https://documentation.iii.com/vega/patron/Landing_Pages/Home-Patron.htm"
+          >?</a
+        >
+        <div class="mobile-hide" style="border-left: 1px solid white"></div>
+        <a
+          style="text-decoration: none; color: white"
+          href="https://www.acpl.lib.in.us/locations-hours"
+          class="mobile-hide"
+        >
+          <i class="bi-info-circle"></i>
+        </a>
+        <div class="mobile-hide" style="border-left: 1px solid white"></div>
+
+        <vega-login-button
+          _nghost-jvk-c14=""
+          ng-version="15.2.10"
+          style="background-color: #3d9be9; color: white"
+        >
+          <i class="bi-person" style="color: white"></i>
+          <span
+            _ngcontent-jvk-c14=""
+            translate=""
+            data-automation-id="unauthorized-user-state"
+            class="button-text ng-star-inserted"
+            style="color: white; font-family: 'Roboto'"
+            >Log in</span
+          >
+        </vega-login-button>
+        <div style="border-left: 1px solid white"></div>
+
+        <vega-toggle-bookmarks-button
+          style="background-color: #3d9be9; color: white"
+        >
+          <i class="bi-bookmark" style="color: white"></i>
+        </vega-toggle-bookmarks-button>
+      </div>
+    </div>
+    <div
+      class="bottom"
+      style="
+        height: 59px;
+        background-color: #0d4e98;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <a
+        id="b-logo"
+        href="https://acpl.lib.in.us"
+        alt="Allen County Public Library ACPL logo"
+        ><img
+          src="https://static.wixstatic.com/media/407f3f_a722d413a04a4a8780be17fd970885b8~mv2.png/v1/crop/x_0,y_0,w_3252,h_886/fill/w_202,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/407f3f_a722d413a04a4a8780be17fd970885b8~mv2.png"
+        />
+      </a>
+      <div id="horizontal-menu">
+        <ul style="display: flex; gap: 24px">
+          <li
+            onmouseenter="openMegaMenu('About')"
+            onclick="openMegaMenu('About')"
+            id="menuItem"
+            onmouseout="closeMegaMenu('About')"
+          >
+            About
+          </li>
+          <li
+            onmouseenter="openMegaMenu('Books')"
+            onclick="openMegaMenu('Books')"
+            id="menuItem"
+            onmouseout="closeMegaMenu('Books')"
+          >
+            Books, Movies & More
+          </li>
+          <li
+            onmouseenter="openMegaMenu('Services')"
+            onclick="openMegaMenu('Services')"
+            onmouseout="closeMegaMenu('Services')"
+            id="menuItem"
+          >
+            Services
+          </li>
+          <li
+            onmouseenter="openMegaMenu('Programs')"
+            onclick="openMegaMenu('Programs')"
+            onmouseout="closeMegaMenu('Programs')"
+            id="menuItem"
+          >
+            Programs & Events
+          </li>
+          <li onmouseenter="hideAllMegas()" onclick="hideAllMegas()">
+            <a
+              href="https://www.genealogy.acpl.lib.in.us/"
+              style="text-decoration: none"
+              >Genealogy</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        id="hamburger-button"
+        onclick="toggleMenu1()"
+        style="
+          background-color: #0d4e98;
+          color: white;
+          font-size: 24px;
+          cursor: pointer;
+        "
+      >
+        <label class="hamburger-menu" for="menu-icon">
+          <i
+            id="hamburger-menu"
+            aria-hidden="true"
+            class="bi bi-list"
+            title="Open or close menu"
+          ></i>
+        </label>
+      </button>
+    </div>
+  </section>
+
+  <div id="menu">
+    <div style="width: 90%;">
+        <button onClick="toggleMenu1()" style="width: min">X</button>
+    </div>
+    <nav id="nav"></nav>
+    <!-- <div class="right" style="display: flex; flex-direction: column; gap:12px; align-items: center; margin-top: 12px">
+    <a
+          class="mobile-btn"
+          href="https://acpl.polarislibrary.com/polaris/patronaccount/selfregister.aspx?ctx=1.1033.0.0.5"
+          >Get a Card</a
+        >
+        <div  style="border-left: 1px solid white"></div>
+        <a
+        class="mobile-btn"
+          href="  https://documentation.iii.com/vega/patron/Landing_Pages/Home-Patron.htm"
+          >?</a
+        >
+        <div style="border-left: 1px solid white"></div>
+        <a
+        class="mobile-btn"
+          href="https://www.acpl.lib.in.us/locations-hours"
+        >
+          <i class="bi-info-circle"></i>
+        </a>
+        </div> -->
+  </div>
+  <div class="menu2" id="menu2">
+    <div
+      class="menu2-top"
+      style="display: flex; justify-content: space-between; padding: 6px"
+    >
+      <span>All Links</span>
+      <button onclick="openMenu2()">X</button>
+    </div>
+  </div>
+  <div id="overlay" onclick="overlayClicked()"></div>
+</body>
